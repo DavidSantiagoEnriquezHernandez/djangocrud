@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{{error}}
+<div class ="container mt-5">
+ <div class="row align-center">
+    <div class="col-md-4 offset-md-4" >
+      <form class="card card-body bord" action = "/signin/" method="POST">
+        <h1 class ="text-center">Sign in</h1>
+      {% csrf_token %}
+      {{form}}
+      <br>
+       <button class="text-center btn btn-dark">Sign In</button>
+      </form>
+    </div>
+ </div>
+</div>
+{% endblock %}
